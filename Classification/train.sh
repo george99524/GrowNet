@@ -7,16 +7,16 @@
 # mnist28 752
 # real-sim 20958
 # higgs 28
-dataset=higgs
+dataset=mnist28
 
 BASEDIR=$(dirname "$0")
 OUTDIR="${BASEDIR}/ckpt/"
 
 if [ ! -d "${OUTDIR}" ]
-then   
+then
     echo "Output dir ${OUTDIR} does not exist, creating..."
     mkdir -p ${OUTDIR}
-fi    
+fi
 
 CUDA_VISIBLE_DEVICES=0 python -u main_cls_cv.py \
     --feat_d 28 \

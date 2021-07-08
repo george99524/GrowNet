@@ -1,7 +1,11 @@
 import math
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from blitz.modules import BayesianLinear
+from blitz.utils import variational_estimator
+
 from .splinear import SpLinear
 
 
@@ -48,8 +52,10 @@ class MLP_2HL(nn.Module):
     def forward(self, x, lower_f):
         if lower_f is not None:
             x = torch.cat([x, lower_f], dim=1)
+            self.eval()
             x = self.bn2(x)
         out = self.lrelu(self.in_layer(x))
+        self.eval()
         out = self.bn(out)
         out = self.hidden_layer(out)
         return out, self.out_layer(self.relu(out)).squeeze()
@@ -62,6 +68,41 @@ class MLP_2HL(nn.Module):
             dim_in = opt.feat_d + opt.hidden_d
         model = MLP_2HL(dim_in, opt.hidden_d, opt.hidden_d, opt.sparse)
         return model
+
+
+@variational_estimator
+class BayesianRegressor(nn.Module):
+    def __init__(self, dim_in, dim_hidden1, dim_hidden2, bn=True):
+        super(BayesianRegressor, self).__init__()
+        self.in_layer = BayesianLinear(dim_in, dim_hidden1)
+        self.dropout_layer = nn.Dropout(0.0)
+        self.lrelu = nn.LeakyReLU(0.1)
+        self.relu = nn.ReLU()
+        self.hidden_layer = BayesianLinear(dim_hidden1, dim_hidden2)
+        self.out_layer = BayesianLinear(dim_hidden2, 1)
+        self.bn = nn.BatchNorm1d(dim_hidden1)
+        self.bn2 = nn.BatchNorm1d(dim_in)
+
+    def forward(self, x, lower_f):
+        if lower_f is not None:
+            x = torch.cat([x, lower_f], dim=1)
+            self.eval()
+            x = self.bn2(x)
+        out = self.lrelu(self.in_layer(x))
+        self.eval()
+        out = self.bn(out)
+        out = self.hidden_layer(out)
+        return out, self.out_layer(self.relu(out)).squeeze()
+
+    @classmethod
+    def get_model(cls, stage, opt):
+        if stage == 0:
+            dim_in = opt.feat_d
+        else:
+            dim_in = opt.feat_d + opt.hidden_d
+        model = BayesianRegressor(dim_in, opt.hidden_d, opt.hidden_d)
+        return model
+
 
 class MLP_3HL(nn.Module):
     def __init__(self, dim_in, dim_hidden1, dim_hidden2, sparse=False, bn=True):
@@ -96,6 +137,7 @@ class MLP_3HL(nn.Module):
         model = MLP_3HL(dim_in, opt.hidden_d, opt.hidden_d, opt.sparse)
         return model
 
+
 class MLP_4HL(nn.Module):
     def __init__(self, dim_in, dim_hidden1, dim_hidden2, sparse=False, bn=True):
         super(MLP_3HL, self).__init__()
@@ -113,13 +155,13 @@ class MLP_4HL(nn.Module):
         if lower_f is not None:
             x = torch.cat([x, lower_f], dim=1)
             x = self.bn2(x)
-        out = self.lrelu(self.in_layer(x)) #HL-1
+        out = self.lrelu(self.in_layer(x))  # HL-1
         out = self.bn(out)
-        out = self.lrelu(self.hidden_layer(out)) #HL-2
+        out = self.lrelu(self.hidden_layer(out))  # HL-2
         out = self.bn(out)
-        out = self.lrelu(self.hidden_layer(out)) #HL-3
+        out = self.lrelu(self.hidden_layer(out))  # HL-3
         out = self.bn(out)
-        out = self.hidden_layer(out) #HL-4
+        out = self.hidden_layer(out)  # HL-4
         return out, self.out_layer(self.relu(out)).squeeze()
 
     @classmethod

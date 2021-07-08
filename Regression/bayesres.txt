@@ -1,0 +1,87 @@
+384
+384
+Creating Validation set! 
+
+#Train: 43533, #Val: 2292 #Test: 7675
+slice_localization training and test datasets are loaded!
+Stage - 0, training time:  3.1 sec, model MSE loss:  19.61903, Ensemble Net MSE Loss:  0.00000
+Stage: 0  RMSE@Tr: 12.96888, RMSE@Val: 13.23600, RMSE@Te: 13.48674
+Stage - 1, training time:  2.6 sec, model MSE loss:  11.92218, Ensemble Net MSE Loss:  0.00000
+Stage: 1  RMSE@Tr: 7.70394, RMSE@Val: 7.81459, RMSE@Te: 7.74483
+Stage - 2, training time:  2.7 sec, model MSE loss:  7.24482, Ensemble Net MSE Loss:  0.00000
+Stage: 2  RMSE@Tr: 6.11924, RMSE@Val: 6.39782, RMSE@Te: 6.83702
+Stage - 3, training time:  2.9 sec, model MSE loss:  5.61365, Ensemble Net MSE Loss:  0.00000
+Stage: 3  RMSE@Tr: 4.74578, RMSE@Val: 5.10121, RMSE@Te: 6.28485
+Stage - 4, training time:  2.9 sec, model MSE loss:  4.54538, Ensemble Net MSE Loss:  0.00000
+Stage: 4  RMSE@Tr: 4.12148, RMSE@Val: 4.42967, RMSE@Te: 6.00335
+Stage - 5, training time:  2.9 sec, model MSE loss:  3.99273, Ensemble Net MSE Loss:  0.00000
+Stage: 5  RMSE@Tr: 3.73445, RMSE@Val: 4.03540, RMSE@Te: 5.90666
+Stage - 6, training time:  2.9 sec, model MSE loss:  3.68834, Ensemble Net MSE Loss:  0.00000
+Stage: 6  RMSE@Tr: 3.47043, RMSE@Val: 3.75882, RMSE@Te: 5.84503
+Stage - 7, training time:  3.0 sec, model MSE loss:  3.47126, Ensemble Net MSE Loss:  0.00000
+Stage: 7  RMSE@Tr: 3.28673, RMSE@Val: 3.53564, RMSE@Te: 5.88205
+Stage - 8, training time:  3.2 sec, model MSE loss:  3.29663, Ensemble Net MSE Loss:  0.00000
+Stage: 8  RMSE@Tr: 3.12691, RMSE@Val: 3.34818, RMSE@Te: 5.86527
+Stage - 9, training time:  3.2 sec, model MSE loss:  3.14061, Ensemble Net MSE Loss:  0.00000
+Stage: 9  RMSE@Tr: 2.99481, RMSE@Val: 3.19912, RMSE@Te: 5.83029
+Stage - 10, training time:  3.2 sec, model MSE loss:  3.03853, Ensemble Net MSE Loss:  0.00000
+Stage: 10  RMSE@Tr: 2.91061, RMSE@Val: 3.11862, RMSE@Te: 5.80257
+Stage - 11, training time:  3.3 sec, model MSE loss:  2.96406, Ensemble Net MSE Loss:  0.00000
+Stage: 11  RMSE@Tr: 2.87641, RMSE@Val: 3.10359, RMSE@Te: 5.82376
+Stage - 12, training time:  3.5 sec, model MSE loss:  2.89357, Ensemble Net MSE Loss:  0.00000
+Stage: 12  RMSE@Tr: 2.78867, RMSE@Val: 3.00274, RMSE@Te: 5.81295
+Stage - 13, training time:  3.4 sec, model MSE loss:  2.89127, Ensemble Net MSE Loss:  0.00000
+Stage: 13  RMSE@Tr: 2.77192, RMSE@Val: 2.99999, RMSE@Te: 5.83927
+Stage - 14, training time:  3.5 sec, model MSE loss:  2.81557, Ensemble Net MSE Loss:  0.00000
+Stage: 14  RMSE@Tr: 2.70188, RMSE@Val: 2.91797, RMSE@Te: 5.83236
+Stage - 15, training time:  3.6 sec, model MSE loss:  2.75173, Ensemble Net MSE Loss:  0.00000
+Stage: 15  RMSE@Tr: 2.65110, RMSE@Val: 2.87939, RMSE@Te: 5.86984
+Stage - 16, training time:  3.8 sec, model MSE loss:  2.69784, Ensemble Net MSE Loss:  0.00000
+Stage: 16  RMSE@Tr: 2.58984, RMSE@Val: 2.83799, RMSE@Te: 5.82781
+Stage - 17, training time:  3.7 sec, model MSE loss:  2.65926, Ensemble Net MSE Loss:  0.00000
+Stage: 17  RMSE@Tr: 2.55214, RMSE@Val: 2.79269, RMSE@Te: 5.83661
+Stage - 18, training time:  3.8 sec, model MSE loss:  2.60896, Ensemble Net MSE Loss:  0.00000
+Stage: 18  RMSE@Tr: 2.52718, RMSE@Val: 2.78318, RMSE@Te: 5.82934
+Stage - 19, training time:  3.9 sec, model MSE loss:  2.57904, Ensemble Net MSE Loss:  0.00000
+Stage: 19  RMSE@Tr: 2.47807, RMSE@Val: 2.73572, RMSE@Te: 5.85911
+Stage - 20, training time:  4.1 sec, model MSE loss:  2.52900, Ensemble Net MSE Loss:  0.00000
+Stage: 20  RMSE@Tr: 2.44573, RMSE@Val: 2.70801, RMSE@Te: 5.87400
+Stage - 21, training time:  4.0 sec, model MSE loss:  2.51723, Ensemble Net MSE Loss:  0.00000
+Stage: 21  RMSE@Tr: 2.41050, RMSE@Val: 2.67306, RMSE@Te: 5.85476
+Stage - 22, training time:  4.1 sec, model MSE loss:  2.46246, Ensemble Net MSE Loss:  0.00000
+Stage: 22  RMSE@Tr: 2.38367, RMSE@Val: 2.65375, RMSE@Te: 5.83832
+Stage - 23, training time:  4.2 sec, model MSE loss:  2.47471, Ensemble Net MSE Loss:  0.00000
+Stage: 23  RMSE@Tr: 2.36480, RMSE@Val: 2.63959, RMSE@Te: 5.82537
+Stage - 24, training time:  4.3 sec, model MSE loss:  2.42601, Ensemble Net MSE Loss:  0.00000
+Stage: 24  RMSE@Tr: 2.35315, RMSE@Val: 2.62086, RMSE@Te: 5.81489
+Stage - 25, training time:  4.5 sec, model MSE loss:  2.43563, Ensemble Net MSE Loss:  0.00000
+Stage: 25  RMSE@Tr: 2.33777, RMSE@Val: 2.61205, RMSE@Te: 5.82613
+Stage - 26, training time:  4.4 sec, model MSE loss:  2.40785, Ensemble Net MSE Loss:  0.00000
+Stage: 26  RMSE@Tr: 2.32179, RMSE@Val: 2.59677, RMSE@Te: 5.82089
+Stage - 27, training time:  4.4 sec, model MSE loss:  2.43165, Ensemble Net MSE Loss:  0.00000
+Stage: 27  RMSE@Tr: 2.32298, RMSE@Val: 2.60805, RMSE@Te: 5.85528
+Stage - 28, training time:  4.6 sec, model MSE loss:  2.37168, Ensemble Net MSE Loss:  0.00000
+Stage: 28  RMSE@Tr: 2.30024, RMSE@Val: 2.58351, RMSE@Te: 5.77893
+Stage - 29, training time:  4.9 sec, model MSE loss:  2.41401, Ensemble Net MSE Loss:  0.00000
+Stage: 29  RMSE@Tr: 2.29151, RMSE@Val: 2.56823, RMSE@Te: 5.81792
+Stage - 30, training time:  4.6 sec, model MSE loss:  2.36372, Ensemble Net MSE Loss:  0.00000
+Stage: 30  RMSE@Tr: 2.27746, RMSE@Val: 2.56449, RMSE@Te: 5.83584
+Stage - 31, training time:  4.8 sec, model MSE loss:  2.33329, Ensemble Net MSE Loss:  0.00000
+Stage: 31  RMSE@Tr: 2.25989, RMSE@Val: 2.55484, RMSE@Te: 5.79213
+Stage - 32, training time:  4.8 sec, model MSE loss:  2.35007, Ensemble Net MSE Loss:  0.00000
+Stage: 32  RMSE@Tr: 2.24762, RMSE@Val: 2.53766, RMSE@Te: 5.79518
+Stage - 33, training time:  5.0 sec, model MSE loss:  2.37334, Ensemble Net MSE Loss:  0.00000
+Stage: 33  RMSE@Tr: 2.23362, RMSE@Val: 2.52647, RMSE@Te: 5.81694
+Stage - 34, training time:  5.0 sec, model MSE loss:  2.29745, Ensemble Net MSE Loss:  0.00000
+Stage: 34  RMSE@Tr: 2.22278, RMSE@Val: 2.51623, RMSE@Te: 5.78841
+Stage - 35, training time:  5.0 sec, model MSE loss:  2.29628, Ensemble Net MSE Loss:  0.00000
+Stage: 35  RMSE@Tr: 2.21429, RMSE@Val: 2.51768, RMSE@Te: 5.81117
+Stage - 36, training time:  5.1 sec, model MSE loss:  2.30678, Ensemble Net MSE Loss:  0.00000
+Stage: 36  RMSE@Tr: 2.19722, RMSE@Val: 2.50303, RMSE@Te: 5.79867
+Stage - 37, training time:  5.2 sec, model MSE loss:  2.27560, Ensemble Net MSE Loss:  0.00000
+Stage: 37  RMSE@Tr: 2.18906, RMSE@Val: 2.50015, RMSE@Te: 5.79796
+Stage - 38, training time:  5.3 sec, model MSE loss:  2.31550, Ensemble Net MSE Loss:  0.00000
+Stage: 38  RMSE@Tr: 2.17194, RMSE@Val: 2.48001, RMSE@Te: 5.76009
+Stage - 39, training time:  5.3 sec, model MSE loss:  2.25118, Ensemble Net MSE Loss:  0.00000
+Stage: 39  RMSE@Tr: 2.16457, RMSE@Val: 2.48126, RMSE@Te: 5.76856
+Best validation stage: 38  RMSE@Tr: 2.17194, final RMSE@Te: 5.76009
